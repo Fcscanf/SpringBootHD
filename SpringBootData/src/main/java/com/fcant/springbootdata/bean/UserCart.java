@@ -1,6 +1,7 @@
 package com.fcant.springbootdata.bean;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
@@ -17,6 +18,7 @@ import javax.validation.constraints.NotBlank;
  */
 @Entity
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Table(name = "HLS_USER")
 public class UserCart {
     @Id
