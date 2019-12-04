@@ -1,5 +1,6 @@
 package com.fcant.springbootdata.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
@@ -24,6 +25,7 @@ public class UserCart {
     @NotBlank
     @Column
     private String name;
+    @JsonIgnore
     @NotBlank
     @Column
     private String account;
