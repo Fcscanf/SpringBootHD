@@ -8,5 +8,7 @@ spring:
     show-sql: true
 
 fcant:
+  tel: 17826260016
+  exist: True
   check:
     code: 123456

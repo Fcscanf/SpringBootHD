@@ -1,5 +1,6 @@
 package com.fcant.springbootexpand;
 
+import com.fcant.springbootexpand.property.BeanProperty;
 import com.fcant.springbootexpand.property.ValueProperty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +15,7 @@ public class SpringBootExpandApplication {
 	public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(SpringBootExpandApplication.class, args);
         LOGGER.info("@Value: {}", run.getBean(ValueProperty.class).getCheck_code());
+        LOGGER.info("@ConfigurationProperties : {}", run.getBean(BeanProperty.class));
     }
 
 }
