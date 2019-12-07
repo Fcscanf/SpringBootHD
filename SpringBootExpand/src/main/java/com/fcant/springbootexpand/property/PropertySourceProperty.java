@@ -18,6 +18,6 @@ import org.springframework.stereotype.Component;
 @PropertySource("classpath:fcant.properties")
 public class PropertySourceProperty {
 
-    @Value("${fcant.property}")
+    @Value("${fcant.property:default}")
     private String property;
 }
