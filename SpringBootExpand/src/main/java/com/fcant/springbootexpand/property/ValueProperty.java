@@ -16,5 +16,5 @@ import org.springframework.stereotype.Component;
 @Data
 public class ValueProperty {
     @Value("${fcant.check.code}")
-    private String check_code;
+    private String checkCode;
 }

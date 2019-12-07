@@ -15,7 +15,7 @@ public class SpringBootExpandApplication {
 
 	public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(SpringBootExpandApplication.class, args);
-        LOGGER.info("@Value: {}", run.getBean(ValueProperty.class).getCheck_code());
+        LOGGER.info("@Value: {}", run.getBean(ValueProperty.class).getCheckCode());
         LOGGER.info("@ConfigurationProperties : {}", run.getBean(BeanProperty.class));
         LOGGER.info("@PropertySource : {}", run.getBean(PropertySourceProperty.class));
     }
