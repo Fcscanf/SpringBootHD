@@ -10,5 +10,6 @@ spring:
 fcant:
   tel: 17826260016
   exist: True
+  properties: YHU
   check:
     code: 123456
