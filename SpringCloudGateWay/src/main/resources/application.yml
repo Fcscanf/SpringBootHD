@@ -1,0 +1,4 @@
+zuul:
+  routes:
+    fcant:
+      path: /fcant-filter
