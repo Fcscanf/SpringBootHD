@@ -1,0 +1,13 @@
+server:
+  port: 8000
+eureka:
+  client:
+    # \u6B64\u5E94\u7528\u4E3A\u6CE8\u518C\u4E2D\u5FC3\uFF0Cfalse\uFF1A\u4E0D\u5411\u6CE8\u518C\u4E2D\u5FC3\u6CE8\u518C\u81EA\u5DF1
+    register-with-eureka: false
+    # \u6CE8\u518C\u4E2D\u5FC3\u804C\u8D23\u662F\u7EF4\u62A4\u670D\u52A1\u5B9E\u4F8B\uFF0Cfalse\uFF1A\u4E0D\u68C0\u7D22\u670D\u52A1
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka
+spring:
+  application:
+    name: eureka-server

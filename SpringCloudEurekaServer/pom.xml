@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fcant</groupId>
-	<artifactId>springcloudeurekasever</artifactId>
+	<artifactId>springcloudeurekaserver</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springcloudeurekasever</name>
 	<description>Demo project for Spring Boot</description>
