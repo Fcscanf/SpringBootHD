@@ -13,3 +13,8 @@ fcant:
   properties: YHU
   check:
     code: 123456
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
