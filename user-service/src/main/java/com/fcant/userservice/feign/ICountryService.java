@@ -1,6 +1,7 @@
 package com.fcant.userservice.feign;
 
 import com.fcant.userservice.bean.Country;
+import com.fcant.userservice.feign.impl.CountryServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  *
  * @author Fcant 10:24 2019/12/9
  */
-@FeignClient(name = "area-service")
+@FeignClient(name = "area-service", fallback = CountryServiceImpl.class)
 public interface ICountryService {
 
     /**
