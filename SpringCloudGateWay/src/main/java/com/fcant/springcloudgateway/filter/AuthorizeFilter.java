@@ -81,16 +81,10 @@ public class AuthorizeFilter extends ZuulFilter {
         String accessToken = request.getParameter("access_token");
         // 模拟accessToken验证授权
         // 使用Objects.equals(Object1, Object2)比较两个对象的一直性更具安全性
-        if (Objects.equals(accessToken, AuthorizeFilter.accessToken)) {
-            currentContext.setResponseStatusCode(HttpStatus.OK.value());
-            currentContext.setResponseBody("Authorized");
-            // 此处设置停止路由，因为模拟请求未做其他API转发处理
-            currentContext.setSendZuulResponse(false);
-        } else {
-            // 如果验证不通过就返回springframework.http.HttpStatus提供的HTTP状态码
+        if (!Objects.equals(accessToken, AuthorizeFilter.accessToken)) {
             currentContext.setResponseStatusCode(HttpStatus.UNAUTHORIZED.value());
             currentContext.setResponseBody(HttpStatus.UNAUTHORIZED.getReasonPhrase());
-            // 此处设置停止路由转发，因为模拟请求未做其他API转发处理
+            // 此处设置停止路由，因为模拟请求未做其他API转发处理
             currentContext.setSendZuulResponse(false);
         }
         return null;
