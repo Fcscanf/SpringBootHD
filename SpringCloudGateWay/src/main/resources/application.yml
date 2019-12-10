@@ -14,6 +14,15 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:9000/eureka
+# 网关调用客户端的超时配置
 ribbon:
   ReadTimeout: 120000  #请求处理的超时时间
   ConnectTimeout: 30000  #请求连接的超时时间
+# 客户端调用网关的超时配置
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
